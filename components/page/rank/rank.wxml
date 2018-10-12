@@ -1,0 +1,115 @@
+<!--components/page/rank/rank.wxml-->
+<scroll-view
+    scroll-x="true"
+    class="tab-h"
+    scroll-left="0"
+>
+    <block
+        wx:for="{{ranksData.arr}}"
+        wx:for-item="rank"
+        wx:key="id"
+    >
+        <view
+            class="tab-item {{currentTabIndex==index?'active':''}}"
+            data-current="{{index}}"
+            data-tagid="{{rank.id}}"
+            bindtap="switchNav"
+        >{{rank.name}}</view>
+    </block>
+</scroll-view>
+<swiper
+    class="tab-content"
+    current="{{currentTabIndex}}"
+    duration="300"
+    bindchange="switchTab"
+    style="height:{{winHeight}}rpx"
+>
+    <swiper-item
+        wx:for="{{ranksData.arr}}"
+        wx:for-item="rank"
+        wx:key="id"
+    >
+        <scroll-view
+            scroll-y="true"
+            class="scoll-h"
+            bindscrolltolower="onScrollToLower"
+            data-index="{{currentTabIndex}}"
+            lower-threshold="30"
+        >
+            <view
+                style='padding:0 20rpx; box-sizing: border-box;'
+            >
+                <view
+                    wx:for="{{rank.content}}"
+                    wx:key="game_id"
+                    wx:for-item="game"
+                    class='level_flex'
+                    data-name='{{rank.name}}'
+                    data-game="{{game}}"
+                >
+
+
+                    <game-click
+                        game="{{game}}"
+                        subject="{{ranksData.type + '_' + ranksData.contentid + '_' + rank.listtype}}"
+                    >
+                        <view class="list">
+                            <view class="ranking_num">
+                                <view wx:if="{{index <= 2}}">
+                                    <image
+                                        class='ranking_img'
+                                        src="{{'../../../resources/images/no'+(index+1)+'.png'}}"
+                                    ></image>
+                                </view>
+                                <view
+                                    class="colorNum"
+                                    wx:else
+                                >{{index + 1}}</view>
+                            </view>
+                            <view>
+                                <image
+                                    src='{{game.icon}}'
+                                    class='icon'
+                                ></image>
+                            </view>
+                            <view class='list_txt'>
+                                <view class='list_title'>
+                                    <text>{{game.name}}</text>
+                                </view>
+                                <view class='list_unum'>
+                                    <text>{{game.unum}}</text>
+                                    <view
+                                        wx:if="{{rank.listtype == 3}}"
+                                        class='list_rocket'
+                                    >
+                                        <image
+                                            src='../../../resources/images/top.png'
+                                            class='list_rocketimg'
+                                        ></image>
+                                        <text>{{game.clickadd}}%</text>
+                                    </view>
+                                </view>
+                                <view class='list_desc'>
+                                    <text>{{game.descs ? game.descs : ''}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </game-click>
+
+
+                    <view class='go'>
+                        <game-click
+                            isPlay="{{true}}"
+                            game="{{game}}"
+                            subject="{{ranksData.type + '_' + ranksData.contentid + '_' + rank.listtype}}"
+                        >
+                            <text>PLAY</text>
+                        </game-click>
+                    </view>
+
+                </view>
+
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

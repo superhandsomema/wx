@@ -1,0 +1,84 @@
+<!--pages/info/info.wxml-->
+<view class="details">
+    <view class="header">
+        <view class="left">
+            <image
+                class="img"
+                src="{{list.content.icon}}"
+            ></image>
+            <view class="txt">
+                <text class="title">{{list.content.name}}</text>
+                <text class="unum">{{list.content.unum}}</text>
+            </view>
+
+        </view>
+        <view class="share">
+            <button
+                open-type="share"
+                class="shareBtn"
+            >
+                分享
+            </button>
+        </view>
+
+    </view>
+    <view>
+        <view class="intro">玩法介绍</view>
+        <view
+            wx:if="{{list.content.g_type=='2'}}"
+            class="qrcode"
+            bind:tap="clickQrcode"
+        >
+            <image
+                mode="aspectFit"
+                src="{{list.content.g_link}}"
+            />
+        </view>
+        <scroll-view
+            wx:else
+            scroll-x
+        >
+            <view class="scroll">
+                <view
+                    class="item {{list.gameimg.length==1?'lonely':''}}"
+                    wx:for="{{list.gameimg}}"
+                    wx:key="{{index}}"
+                >
+                    <image
+                        src="{{item.img}}"
+                        bind:tap="viewImage"
+                        mode="aspectFit"
+                    />
+                </view>
+
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view class="b">
+    <view
+        class="ad"
+        wx:if="{{list.ad[0]}}"
+    >
+        <ad
+            unit-id="{{list.ad[0]}}"
+            bindload="adLoad"
+            binderror='adError'
+        ></ad>
+    </view>
+    <view class="btnWrap">
+        <view
+            class="btn"
+            bind:tap="play"
+            wx:if="{{list.content.g_type!='2'}}"
+        >
+            <game-click
+                isPlay="{{true}}"
+                game="{{list.content}}"
+            >
+                PLAY
+            </game-click>
+
+        </view>
+    </view>
+</view>

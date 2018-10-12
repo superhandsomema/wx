@@ -1,0 +1,80 @@
+/* components/share.wxss */
+.wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+  background: rgba(255, 43, 43, 0.123);
+}
+.drag {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  background: #000;
+  z-index: 999;
+}
+.share1 {
+  position: fixed;
+  bottom: 120rpx;
+  right: 50rpx;
+  width: 124rpx;
+  height: 192rpx;
+}
+.btn_share1 {
+  padding: 0;
+  border: none;
+  width: 124rpx;
+  height: 192rpx;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 124rpx 192rpx;
+}
+.share2 {
+  position: fixed;
+  bottom: 120rpx;
+  right: 50rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  box-shadow: 0 0 20rpx #aaa;
+}
+.btn_share2 {
+  padding: 0;
+  border: none;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 120rpx 124rpx;
+}
+button::after {
+  border: none;
+}
+/* button[class="btn_share"]::after {
+  border: 0;
+}  */
+.eff {
+  /* transition: 1s scaleDraw linear infinite; */
+  -webkit-animation-name: scaleDraw; /*关键帧名称*/
+  -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+  -webkit-animation-iteration-count: infinite; /*动画播放的次数*/
+  -webkit-animation-duration: 3s; /*动画所花费的时间*/
+}
+@keyframes scaleDraw {
+  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.isIphoneX {
+  bottom: 176rpx;
+}

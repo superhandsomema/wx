@@ -1,0 +1,6 @@
+{
+	"component":true,
+	"usingComponents":{
+		"game-click": "/components/gameClick/gameClick"
+	}
+}

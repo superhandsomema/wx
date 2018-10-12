@@ -1,0 +1,31 @@
+<!-- pages/involved.wxml -->
+<view class='container'>
+  <scroll-view
+    style='height:{{winHeight}}rpx'
+    scroll-y="true"
+    bindscrolltolower="getDatas"
+  >
+    <block
+      wx:for="{{list}}"
+      wx:key="index"
+    >
+      <game-click
+        game="{{item}}"
+        subject="mygame"
+      >
+        <view class="list">
+          <view class='icon'>
+            <image src='{{item.icon}}'></image>
+          </view>
+          <view class="text">
+            <text class="title">{{item.name}}</text>
+            <view class="des">
+              <text class="num">玩过{{item.totalclick}}次</text>
+              <text class="time">{{item.lastclick}}</text>
+            </view>
+          </view>
+        </view>
+      </game-click>
+    </block>
+  </scroll-view>
+</view>

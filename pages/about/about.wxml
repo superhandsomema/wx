@@ -1,0 +1,78 @@
+<!-- pages/about.wxml -->
+<view class='container'>
+  <!-- 顶部个人信息 -->
+  <view class='header'>
+    <view class='headerCont'>
+      <view class='userImg'>
+        <open-data
+          type="userAvatarUrl"
+          class="userImg"
+        ></open-data>
+      </view>
+      <view style='color:#fff;'>
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <view class='aboutBg'>
+      <image
+        class='aboutBg'
+        src='../../resources/images/aboutBg.png'
+      ></image>
+    </view>
+  </view>
+  <!-- 账户余额显示 -->
+  <view class='moneyCont'>
+    <view>
+      <text style='font-size:26rpx;'>账户余额：</text>
+    </view>
+    <view>
+      <text style='font-size:33rpx;color:#333;'>{{cash}}</text>
+    </view>
+    <view
+      bindtap='moneyOpen'
+      class='moneyOpen'
+    >
+      <text>提现</text>
+    </view>
+  </view>
+  <!-- 玩过游戏 -->
+  <my-game></my-game>
+  <!-- 推荐有礼分享图片 -->
+  <view wx:if="{{hasRedBag>1}}"
+    class='shareImg'
+    bindtap='wealthOpen'
+  >
+    <view wx:if="{{redType}}">
+      <image
+        class='shareImgBig'
+        src='../../resources/images/redBog.png'
+      ></image>
+    </view>
+    <view wx:if="{{!redType}}">
+      <image
+        class='shareImgBig'
+        src='../../resources/images/shareMoney.png'
+      ></image>
+      <view class=''>
+        <image
+          class='goShare'
+          src='../../resources/images/go.png'
+        ></image>
+      </view>
+    </view>
+  </view>
+  <!-- <view
+    wx:esle
+    class='shareImg'
+  ></view> -->
+  <!-- 分享按钮button -->
+  <share
+    id='share'
+    bind:refresh='refresh'
+    openFalse='{{falseTrue}}'
+  ></share>
+  <tab-bar
+    id='tabbar'
+    inner-index="{{2}}"
+  ></tab-bar>
+</view>

@@ -1,0 +1,276 @@
+/* pages/wealth.wxss */
+.container {
+	width: 100%;
+	height: 100%;
+	background-color: #F2F2F2;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.header {
+	width: 100%;
+	height: 478rpx;
+	opacity: 1;
+	 background-image: linear-gradient(180deg, #FE582B 0%, #FF8142 89%); 
+	position: relative;
+}
+.headerCont {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	 flex-direction: column; 
+	 align-items: center; 
+	box-sizing: border-box;
+}
+.headerBg {
+	display: block;
+	width: 100%;
+	height: 478rpx;
+}
+.userImg {
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50rpx;
+	background-color: #ddd;
+	overflow: hidden;
+	margin-top: 44rpx;
+	
+}
+.moneyOpen {
+	width: 262rpx;
+	height: 66rpx;
+	border-radius: 30rpx;
+	font-size: 32rpx;
+	color: #FE602F;
+	background-color: #FEE94D;
+	text-align: center;
+	line-height: 66rpx;
+	
+}
+.mongeyList {
+	display: flex;
+	justify-content: space-around;
+	box-sizing: border-box;
+	align-items: center;
+	position: relative;
+}
+.copy {
+	width: 97rpx;
+	height: 131rpx;
+	/* border: 1px solid #000; */
+	position: relative;
+}
+.copyMoney {
+	width: 96rpx;
+	position:absolute;
+	top:56rpx;
+	left:50%;
+	margin-left: -48rpx;
+	text-align: center;
+}
+.copyMoney1 {
+	top:86rpx;
+	
+}
+.copy .copy_bg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	 transform: scale(1.5,1.5); 
+}
+.copy .imgBig {
+	 transform: scale(1.8,1.8); 
+}
+
+.copy_chai {
+	display: block;
+	position: absolute;
+	width: 46rpx;
+	height: 46rpx;
+	top: 6rpx;
+	left: 50%;
+	margin-left: -23rpx;
+	transform: scale(1.2);
+}
+.copy_jg {
+	display: block;
+	position: absolute;
+	width: 60rpx;
+	height: 60rpx;
+	top: 2rpx;
+	left: 50%;
+	margin-left: -30rpx;
+	transform: scale(1.75);
+}
+imgBig .copy_chai {
+	 transform: scale(1.5);
+}
+.imgBig {
+	width: 117rpx;
+	height: 157rpx;
+}
+.moneyMore {
+	width: 710rpx;
+	height: 580rpx;
+	background-color: #fff;
+	border-radius: 30rpx;
+	margin: 0 auto;
+	position: relative;
+	top: -80rpx;
+		padding: 0 29rpx;
+	box-sizing: border-box;
+}
+.moneyMore_tit {
+	margin: 26rpx 0 20rpx;
+	font-size: 36rpx;
+	color: #000;
+}
+.shareOpen {
+	/* width: 110rpx; */
+	margin: 30rpx 30rpx;
+	height: 80rpx;
+	border-radius: 30rpx;
+	font-size: 32rpx;
+	color: #fff;
+	background-image: linear-gradient(90deg, #FFDA44 0%, #FF9600 100%);
+	text-align: center;
+	line-height: 80rpx;
+	border: 0;
+	outline: none;
+	
+}
+button[class="shareOpen"]::after {
+  border: 0;
+} 
+.assistance {
+	width: 710rpx;
+	background-color: #fff;
+	border-radius: 30rpx;
+	margin: 0 auto 30rpx;
+	padding: 0 29rpx;
+	box-sizing: border-box;
+}
+.assistance1 {
+	height: 294rpx;
+}
+.assistance2 {
+	/* height: 565rpx; */
+	margin-bottom: 20rpx;
+}
+.friendslist {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 60rpx;
+	margin: 30rpx 0;
+	overflow: hidden;
+	line-height: 60rpx;
+
+}
+.friendslist image {
+	display: block;
+	width: 60rpx;
+	height: 60rpx;
+	/* border: 1px solid #f00; */
+	border-radius: 30rpx;
+}
+.friends_bg {
+	font-size: 20rpx;
+	color: #f00;
+	background-color: #ffde88;
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 17rpx;
+	text-align: center;
+	line-height: 34rpx;
+}
+
+/* 点击红包出现红包效果特x效 */
+.redPacket {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 66;
+	background-color: rgba(0,0,0,0.5);
+}
+.redPacket_close {
+	width: 70rpx;
+	height: 70rpx;
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	
+}
+.redPacket_close image {
+	width: 70rpx;
+	height: 70rpx;
+}
+.chaihb {
+	display: block;
+	width: 480rpx;
+	height: 586rpx;
+	position: absolute;
+	 top: 50%;
+	left: 50%; 
+	margin-left: -240rpx;
+	margin-top: -293rpx;
+	-webkit-animation-name: scaleDraw; /*关键帧名称*/
+             -webkit-animation-timing-function: ease-in-out; /* 动画的速度曲线  */
+            -webkit-animation-iteration-count: 1;  /*动画播放的次数*/
+            -webkit-animation-duration: 0.5s; /*动画所花费的时间*/
+}
+.chaihb1 {
+	height: 562rpx;
+	margin-top: -281rpx;
+}
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+            0%{
+								 	width: 0rpx;
+									height: 0rpx; 
+									margin-left: 0rpx;
+									margin-top: 0px;
+									opacity: 0.8;
+						}
+            100%{
+									opacity: 1;
+            }
+        }
+
+.redPacketNum {
+	width: 210rpx;
+	height: 300rpx;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	margin-left: -105rpx;
+	text-align: center;
+
+}
+.shareXy {
+	 width: 400rpx; 
+	height: 80rpx;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	margin-left: -200rpx;
+	border-radius: 30rpx;
+	font-size: 34rpx;
+	color: #fff;
+	background-image: linear-gradient(90deg, #FFDA44 0%, #FF9600 100%);
+	text-align: center;
+	line-height: 80rpx;
+	border: none;
+	outline: none;
+}
+.itemMoneyDian {
+	width: 16rpx;
+	height: 16rpx;
+	border-radius: 16rpx;
+	background: #fff;
+	border: 6rpx solid #FF9600;
+	position: absolute;
+	top: 186rpx;
+	margin-left: 38rpx;
+}

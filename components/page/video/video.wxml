@@ -1,0 +1,61 @@
+<!--components/page/video.wxml-->
+<view class='section-title'>
+    <text>{{videos.name}}</text>
+</view>
+<view class='video'>
+    <scroll-view scroll-x="true">
+        <view class="uploadWrap" scroll-x="true">
+            <view class="upload_Item {{index == uploadWrapNum ? 'active':''}}" wx:for="{{videosData.arr}}" wx:for-item="video" wx:key="video_id" >
+                <view class="upload_ItemBottom" wx:if="{{video.wxgame != null}}">
+                    <!--<navigator wx:if="{{video.wxgame.g_type == 1}}"-->
+                               <!--target="miniProgram"-->
+                               <!--open-type="navigate"-->
+                               <!--version="release" -->
+                               <!--data-video='video'-->
+                               <!--data-game="{{video.wxgame}}"-->
+                               <!--app-id="{{video.wxgame.appid}}"-->
+                               <!--extra-data="{{video.wxgame.parameter}}"-->
+                               <!--bindtap="onOpenDirectGame">-->
+                    <!--<view class="upload_ItemBottom">-->
+                        <!--<image src="{{video.wxgame.icon}}"></image>-->
+                        <!--<text style='width:160rpx;overflow:hidden;'>{{video.wxgame.name}}</text>-->
+                        <!--<view class='go'>PLAY</view>-->
+                    <!--</view>-->
+                    <!--</navigator>-->
+                    <!--<view wx:else data-video="{{video}}" data-game="{{video.wxgame}}" bindtap="onOpenGame">-->
+                        <!--<view class='upload_ItemBottom'>-->
+                            <!--<image src="{{video.wxgame.icon}}"></image>-->
+                            <!--<text style='width:160rpx;overflow:hidden;'>{{video.wxgame.name}}</text>-->
+                            <!--<view class='go'>PLAY</view>-->
+                        <!--</view>-->
+                    <!--</view>-->
+                    <game-click game="{{video.wxgame}}" subject="{{videos.type + '_' + videos.contentid}}">
+                        <view class='upload_ItemBottom'>
+                            <image src="{{video.wxgame.icon}}"></image>
+                            <text style='width:160rpx;overflow:hidden;'>{{video.wxgame.name}}</text>
+                            <view class='go'>PLAY</view>
+                        </view>
+                    </game-click>
+                </view>
+                <view>
+                    <game-click game="{{video.wxgame}}" subject="{{videos.type + '_' + videos.contentid}}">
+                        <image data-current="{{index}}" data-video="{{video}}" style='width:330rpx;height:586rpx;' src="{{video.img}}" data-game="{{video.wxgame}}"></image>
+                    </game-click>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <!--<view class="videoCont" catchtouchmove="handletouchmove" wx:if="{{isVideoPlaying}}">-->
+        <!--<view class="videoContent" wx:for="{{videosData.arr}}" wx:for-item="video" wx:key="{{video.id}}" >-->
+            <!--<view class='videoWZ'>-->
+                <!--<video id="{{videoKeyPrefix}}{{video.video_id}}"-->
+                       <!--bindfullscreenchange="onFullScreenChange"-->
+                       <!--bindended="onEnded"-->
+                       <!--src="{{video.url}}"-->
+                       <!--data-video="{{video}}"-->
+                       <!--data-game="{{video.wxgame}}"-->
+                       <!--controls="true" ></video>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>

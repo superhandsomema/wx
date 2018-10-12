@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#FC8A02",
+  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "tab-bar": "/components/tabBar/tabBar",
+    "my-game": "/components/about/myGame/myGame",
+    "share": "/components/share/share"
+  },
+  "enablePullDownRefresh": true
+}

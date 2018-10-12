@@ -1,0 +1,37 @@
+<!-- components/share.wxml -->
+
+<!-- <view class="wrap">
+  <view
+    catch:touchstart="touchStart"
+    catch:touchmove="touchMove"
+    catch:touchend="touchEnd"
+    class="drag"
+    style="left:{{left}}rpx;top:{{top}}rpx;"
+  >
+  </view>
+</view> -->
+
+
+
+<view
+  wx:if='{{shareStatus == 1}}'
+  class="share1 {{isIphoneX ? 'isIphoneX' :'' }}"
+>
+  <button
+    open-type="share"
+    class='eff btn_share1 '
+    style='background-image:url({{shareIcon1}}) '
+  ></button>
+</view>
+<view
+  wx:if='{{shareStatus == 2}}'
+  class="share2 view {{isIphoneX ? 'isIphoneX' :'' }}"
+>
+  <button
+    wx:if="{{!openFalse}}"
+    open-type="button"
+    class='eff btn_share2'
+    style='background-image:url({{shareIcon2}}) '
+    bind:tap="navigate"
+  ></button>
+</view>

@@ -1,0 +1,122 @@
+/* pages/info/info.wxss */
+page {
+  height: 100%;
+}
+.details {
+  margin: 0 30rpx;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.left {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.img {
+  width: 145rpx;
+  height: 145rpx;
+  border-radius: 30rpx;
+}
+.txt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+.title {
+  line-height: 86rpx;
+}
+.unum {
+  font-size: 26rpx;
+  color: #757783;
+}
+.share {
+  background-color: transparent;
+  width: 110rpx;
+  height: 54rpx;
+  overflow: hidden;
+}
+.shareBtn {
+  background-image: linear-gradient(90deg, #ffda44 0%, #ff9600 100%);
+  border-radius: 37px;
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 54rpx;
+  color: #fff;
+  padding: 0;
+  border: 0;
+}
+
+.intro {
+  font-size: 34rpx;
+  margin-bottom: 22rpx;
+}
+
+.scroll {
+  display: flex;
+  display: -webkit-box;
+  height: 600rpx;
+}
+.scroll .item {
+  flex: 1;
+  width: 446rpx;
+  margin-right: 30rpx;
+}
+.scroll .lonely {
+  display: flex;
+  margin: 0 auto;
+}
+.scroll .lonely image {
+  margin: 0 auto;
+}
+.scroll image {
+  width: 446rpx;
+  height: 594rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+
+.qrcode {
+  width: 540rpx;
+  height: 720rpx;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.qrcode image {
+  width: 100%;
+  height: 100%;
+}
+.b {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ad {
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
+}
+.btnWrap {
+  border-top: 1px solid #ddd;
+}
+.btn {
+  margin: 16rpx auto;
+  width: 690rpx;
+  height: 66rpx;
+  border-radius: 33rpx;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 66rpx;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ffda44 0%, #ff9600 100%);
+}

@@ -1,0 +1,13 @@
+<view class="container" xmlns:wx="">
+    <view 
+        class="moduleData" 
+        wx:for="{{components}}" 
+        wx:for-item="component" 
+        wx:key="id" 
+        style="width:100%"
+    >
+        <rank wx:if="component.type == 'Rankinglistparts'" ranks="{{component}}"></rank>
+    </view>
+    <share id='share' openFalse='{{falseTrue}}'></share>
+    <tabBar inner-index="{{1}}"></tabBar>
+</view>

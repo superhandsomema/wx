@@ -1,0 +1,36 @@
+<!-- components/page/articleparts/articleparts.wxml -->
+
+
+<view >
+    <view class='section-title' >
+      <text>{{articles.name}}</text>
+    </view>
+    <view class='image-text' wx:if="{{type=='horizontal'}}">
+      <scroll-view scroll-x="true">
+        <view class="uploadWrap" style='height:260rpx;' scroll-x="true">
+          <view 
+            class='cont' 
+            wx:for="{{articles.arr}}" 
+            wx:key="id" 
+            data-article="{{item}}" 
+            bind:tap='imageText'
+          >
+            <image src='{{item.img}}'></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='image-text1'  wx:if="{{type=='vertical'}}">
+        <view class="item-img-cont1">
+            <view 
+                class='content' 
+                wx:for="{{articles.arr}}" 
+                wx:key="id" 
+                data-article="{{item}}" 
+                bind:tap='imageText'
+            >
+              <image class='content' src='{{item.img}}'></image>
+            </view>
+        </view>
+    </view>
+</view>

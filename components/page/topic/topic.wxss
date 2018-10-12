@@ -1,0 +1,53 @@
+/* components/page/topic/topic.wxss */
+
+.section-topic {
+    width: 696rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #eee;
+}
+
+.section-title {
+    width:100%;
+    padding: 30rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.section-item {
+    width: 148rpx;
+    text-align: center;
+    padding: 0 34rpx 30rpx 0;
+}
+.section-item:nth-child(4n+4){
+	padding-right: 0;
+}
+
+.game-image {
+    width: 148rpx;
+    height: 148rpx;
+    border-radius: 30rpx;
+}
+
+.game-play-num{
+    width: 148rpx;
+    font-size: 20rpx;
+    color: #6E7888;
+    text-align: center;
+    margin-top: 5rpx;
+}
+
+.game-name {
+    width: 148rpx;
+		height: 36rpx;
+    font-size: 26rpx;
+    text-align: center;
+    color: #000;
+    letter-spacing: 1.2rpx;
+		overflow: hidden;
+}

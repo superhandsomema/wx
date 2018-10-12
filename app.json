@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/info/info",
+    "pages/web/web",
+    "pages/about/about",
+    "pages/wealth/wealth",
+    "pages/withdraw/withdraw",
+    "pages/myGame/myGame",
+    "pages/newRank/newRank",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "享游小屋",
+    "navigationBarTextStyle": "black"
+  }
+}

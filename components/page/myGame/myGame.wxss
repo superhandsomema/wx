@@ -1,0 +1,68 @@
+/* 历史玩过的游戏 */
+.ever,
+.vedioCont {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.ever_tit {
+  position: absolute;
+  /* top: 80rpx; */
+  right: 0;
+  width: 156rpx;
+  height: 68rpx;
+}
+.ever_tit image {
+  width: 156rpx;
+  height: 68rpx;
+}
+.everCont {
+  width: 710rpx;
+  /* height: 434rpx; */
+  position: absolute;
+  top: 200rpx;
+  left: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content:flex-start;
+  /* flex-direction:  column ; */
+  flex-wrap: wrap;
+  /* align-items:center; */
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ever-item {
+  width: 110rpx;
+  height: 150rpx;
+  font-size: 20rpx;
+  text-align: center;
+  margin: 15rpx 25rpx ;
+}
+.name {
+  width: 110rpx;
+  height: 30rpx;
+  overflow: hidden;
+}
+.ever-i {
+  margin-right: 0;
+}
+.ever-img {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 55rpx;
+  background: #d8d8d8;
+}
+.ever-img1 {
+  text-align: center;
+  line-height: 50rpx;
+  color: #fff;
+  font-size: 100rpx;
+}

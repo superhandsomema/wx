@@ -1,0 +1,36 @@
+.column {
+  width: 690rpx;
+  height: 150rpx;
+  display: flex;
+  margin: 0 auto 24rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 0 29rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  align-items: center;
+}
+.column > view > image,
+.column > view > text {
+  vertical-align: middle;
+}
+.icon {
+  width: 48rpx;
+  height: 36rpx;
+}
+.title {
+  font-size: 28rpx;
+  padding-left: 17rpx;
+  line-height: 60rpx;
+}
+.img {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 17rpx;
+  border-radius: 50%;
+}
+.arrow {
+  width: 20rpx;
+  height: 36rpx;
+}

@@ -1,0 +1,90 @@
+/**index.wxss**/
+.moduleData {
+  width: 100%;
+}
+/* 助力弹框样式 */
+.support {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 66;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.supportCont {
+  width: 524rpx;
+  height: 580rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -290rpx 0 0 -262rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333333;
+}
+.supportBg {
+  display: block;
+  width: 234rpx;
+  height: 221rpx;
+  margin: 42rpx auto;
+}
+.supportSuccess {
+  width: 282rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  background-image: linear-gradient(90deg, #ffda44 0%, #ff9600 100%);
+  border-radius: 10px;
+  margin: 100rpx auto 0;
+  color: #fff;
+}
+
+.header_flex {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  height: 100rpx;
+}
+.header_parallel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 34rpx;
+}
+.btn_auth {
+  position: absolute;
+  top: 34rpx;
+  right: 34rpx;
+  border-radius: 3px;
+  width: 88rpx;
+  height: 44rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ffda44 0%, #ff9600 100%);
+  text-align: center;
+  line-height: 44rpx;
+  padding: 0 0;
+}
+.icon_auth {
+  width: 85rpx;
+  height: 85rpx;
+  margin-top: 10rpx;
+}
+.header_more {
+  color: #f00;
+  font-size: 18rpx;
+  padding-left: 20rpx;
+}
+
+.ad_banner {
+  width: 92%;
+  margin: 0 auto;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}

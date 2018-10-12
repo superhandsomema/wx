@@ -1,0 +1,10 @@
+<view class='column' bind:tap="jump" wx:if="{{list.length}}" >
+    <view>
+        <image class='icon' src="img/icon.png" />
+        <text class="title">我的游戏</text>
+    </view>
+    <view>
+        <image wx:key="index" wx:for="{{list}}" class="img" src="{{item.icon}}" />
+        <image class='arrow' src="img/arrow.png" />
+    </view>
+</view>

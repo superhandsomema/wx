@@ -1,0 +1,5 @@
+/* pages/web/web.wxss */
+page {
+  height: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,40 @@
+<!--pages/withdraw/withdraw.wxml-->
+
+<view class='container'>
+	<view class='withdraw'>
+		<view style='height:169rpx;background: #FBFBFB;padding:30rpx 60rpx 0;box-sizing: border-box;'>
+			<view>
+			<text style='font-size:30rpx;color:#000;margin-right:60rpx;font-weight: bold'>到账账户</text>
+			<text style='font-size: 30rpx;color: #46C142;'>微信零钱</text>
+		</view>
+		<view style='margin-top:10rpx;'>
+			<text style='font-size: 26rpx;color: #9A9A9A;'>提现金额将在3-5个工作日打入您的微信零钱中</text>
+		</view>
+		</view>
+		<view style='padding:20rpx 60rpx 0;box-sizing: border-box;'>
+			<view>
+				<text style='font-size: 30rpx;color: #9A9A9A;'>提现金额</text>
+			</view>
+			<view class='moneyInput'>
+				<text style='color:#9a9a9a;font-size:80rpx;font-weight:blod;'>￥</text>
+				<input placeholder="" bindinput='inputMoney' type='digit' auto-focus  value="{{inputMoney}}" style='height:100rpx;font-size:54rpx;color:#333;' />
+			</view>
+			<!-- <view wx:if="{{money<5}}">
+				 <text style='font-size: 26rpx;color: #FB1212;'>最低提现金额为5元，您的金额不足。</text> 
+			</view> -->
+			<view class='shuip'>
+				<view>
+					<text style='font-size: 26rpx;color: #9A9A9A;margin-right:50rpx;'>当前可提现金额为￥{{money}}</text>
+				</view>
+				<view bindtap='moneyTx'>
+					<text style='font-size: 26rpx;color: #576B95;'>全部提现</text>
+				</view>
+			</view>
+			<view style='margin-top:30rpx;'>
+			<!-- <button type="primary" disabled="{{money<5}}">提现</button> -->
+				<button type="primary" bindtap='openWithdraw'>提现</button>
+			</view>
+		</view>	
+
+	</view>
+</view>

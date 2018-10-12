@@ -1,0 +1,91 @@
+<view class="container">
+    <!-- 我玩过的 -->
+    <my-game
+        wx:if="{{!tabBarStatus}}"
+        id='myGame'
+    ></my-game>
+
+    <!-- 循环出后台拿到的数组 -->
+    <view class='moduleData'>
+        <view
+            wx:for="{{moduleData}}"
+            wx:key="id"
+        >
+            <!-- 游戏列表模块 -->
+            <block wx:if="{{item.type == 'Topic' && item.style == '1'}}">
+                <topic
+                    id="topic"
+                    topic="{{item}}"
+                ></topic>
+            </block>
+            <!-- 精选小视频模块 -->
+            <block wx:if="{{item.type == 'Videoparts'}}">
+                <videoComponent videos="{{item}}"></videoComponent>
+            </block>
+            <!-- 游戏纵向列表 -->
+            <block wx:if="{{item.type == 'Topic' && item.style == '2'}}">
+                <topicHeight
+                    id="topicHeight"
+                    topicHeight="{{item}}"
+                ></topicHeight>
+            </block>
+            <!-- 图文跳转列表 横版 -->
+            <block wx:if="{{item.type == 'Articleparts' && item.style == '1'}}">
+                <articles
+                    articles="{{item}}"
+                    type='horizontal'
+                ></articles>
+            </block>
+            <!-- 图文跳转列表竖版 -->
+            <block wx:if="{{item.type == 'Articleparts' && item.style == '2'}}">
+                <articles
+                    articles="{{item}}"
+                    type='vertical'
+                ></articles>
+            </block>
+            <!-- 广告位 -->
+            <block wx:if="{{item.type == 'Advertisementparts' && item.source == 1}}">
+                <view
+                    data-ad="{{item}}"
+                    bind:tap="onClickAd"
+                    class="ad_banner"
+                >
+                    <ad
+                        unit-id="{{item.source_id}}"
+                        bindload="{{adLoad}}"
+                        binderror='"adError"'
+                    ></ad>
+                </view>
+            </block>
+
+        </view>
+    </view>
+    <share
+        id="share"
+        wx:if="{{!tabBarStatus}}"
+        bind:action='bridge'
+        openFalse='{{falseTrue}}'
+    ></share>
+    <tab-bar
+        wx:if="{{!tabBarStatus}}"
+        id='tabbar'
+        inner-index="{{0}}"
+    ></tab-bar>
+    <!-- 好友收到助力弹框 -->
+    <view
+        class='support'
+        wx:if="{{support}}"
+    >
+        <view class='supportCont'>
+            <image
+                src='../../resources/images/Bitmap.png'
+                class='supportBg'
+            ></image>
+            <text>我收到您的助力，万分感谢</text>
+            <view
+                bind:tap='supportSuccess'
+                class='supportSuccess'
+            >我知道了</view>
+        </view>
+    </view>
+</view>

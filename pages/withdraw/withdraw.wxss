@@ -1,0 +1,35 @@
+/* pages/withdraw/withdraw.wxss */
+page {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.withdraw {
+  width: 691rpx;
+  height: 666rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+  margin: 30rpx auto 510rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.moneyInput {
+  display: flex;
+  justify-content: flex-start;
+  height: 160rpx;
+  align-items: center;
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+.shuip {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "rank": "/components/page/rank/rank",
+    "tabBar": "/components/tabBar/tabBar",
+    "share": "/components/share/share"
+  },
+  "enablePullDownRefresh": true
+}

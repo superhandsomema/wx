@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的游戏",
+  "usingComponents": {
+    "game-click": "/components/gameClick/gameClick"
+  }
+}

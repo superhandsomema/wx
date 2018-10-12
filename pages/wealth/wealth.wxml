@@ -1,0 +1,140 @@
+<!--pages/wealth.wxml-->
+
+<view class='container'>
+  <view class='header'>
+    <view class='headerCont'>
+      <view class='userImg'>
+        <open-data type="userAvatarUrl" class="userImg"></open-data>
+      </view>
+      <view style='margin:20rpx auto;'>
+				<text style='font-size:40rpx;color:#fff;'>￥</text>
+        <text style='font-size:68rpx;color:#fff;'>{{cont.cash}}</text>
+      </view>
+      <view bindtap='moneyOpen' class='moneyOpen'>
+        <text>提现</text>
+      </view>
+    </view>
+		<view>
+			<image src='../../resources/images/wealthBg.png' class='headerBg'></image>
+		</view>
+
+  </view>
+  <!-- 好友助力领红包 -->
+  <view style='height:508rpx;margin-bottom:45rpx;'>
+    <view class='moneyMore'>
+      <view class='moneyMore_tit' style='padding-top:40rpx;margin-bottom:64rpx;'>
+        <text> 好友助力领红包</text>
+      </view>
+      <view class='mongeyList'>
+        <view wx:for="{{itemMoney}}" bindtap="clickenvelope" data-index="{{item.num}}" wx:key="id">
+					<view class='itemMoneyDian'></view>
+          <view wx:if="{{item.imgTrue}}">
+            <view class="copy">
+              <image src='../../resources/images/copy101.png' class="copy_bg  {{item.imgBig ? 'imgBig' :''}}"></image>
+              <view wx:if="{{item.imgBig}}" class=''>
+                <image src='../../resources/images/copy201.png' class='copy_jg'></image>
+              </view>
+              <view>
+                 <image src='../../resources/images/chai.png' class='copy_chai'></image> 
+              </view>
+
+              <view class='copyMoney'>
+								<text style='color:#fff;font-size:22rpx;'>￥</text>
+                <text style='color:#fff;font-size:32rpx;'> ?</text>
+              </view>
+              <view class='copyMoney copyMoney1'>
+                <text style='color:#fff;font-size:16rpx;'>最高可领8元</text>
+              </view>
+            </view>
+          </view>
+          <view wx:if="{{!item.imgTrue}}">
+            <view class="copy">
+              <image src='../../resources/images/openMoney.png' class='copy_bg'></image>
+              <view class='copyMoney'>
+                <text style='color:#fff;font-size:26rpx;'>￥{{item.money}}</text>
+              </view>
+              <view class='copyMoney copyMoney1'>
+                <text style='color:#fff;font-size:16rpx;'>红包已领取</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <view style='margin:62rpx 0 32rpx;border-radius: 10rpx;overflow:hidden;'>
+        <progress percent="{{progressBar}}" color='#ff8a4f' stroke-width="6" />
+      </view>
+      <view class='mongeyList'>
+        <view wx:for="{{gearMoney}}" class='' wx:key="id">
+          <view style='font-size:20rpx;letter-spacing: 1.4rpx;'>
+            <text style='color:#f00;font-size:22rpx;'>{{item}}</text>
+						<text style='color:#9a9a9a;'>好友助力</text>
+          </view>
+        </view>
+
+      </view>
+      <view>
+        <button class='shareOpen' open-type='share'>邀请好友前来助力</button>
+      </view>
+
+    </view>
+  </view>
+  <!-- 点击红包出现红包拆开页面及效果 -->
+  <view wx:if="{{redPacket}}">
+    <view class='redPacket'>
+      <image class='chaihb' bindtap='redPacket' src='../../resources/images/chaihb.png'></image>
+    </view>
+
+  </view>
+  <!-- 红包拆开后页面及效果 -->
+  <view wx:if="{{redPacket1}}">
+    <view class='redPacket'>
+      <view class='redPacket_close' bindtap="redPacketClose">
+        <image src='../../resources/images/close.png'></image>
+      </view>
+      <image class='chaihb chaihb1' src='../../resources/images/openMoney.png'></image>
+      <view class='redPacketNum'>
+				<text style='font-size: 65rpx;color: #FAE74E;'>￥</text>
+        <text style='font-size: 75rpx;color: #FAE74E;'>{{moneyNum}}</text>
+        <view>
+          <text style='font-size: 38rpx;color: #FAE74E;'>红包已领取</text>
+        </view>
+      </view>
+      <view bindtap='shareFlaunt'>
+        <button class='shareXy' open-type='share'>炫耀一下</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 助力说明 -->
+  <view class='assistance assistance1'>
+    <view class='moneyMore_tit'>
+      <text> 助力说明</text>
+    </view>
+    <view style='line-height:38rpx;'>
+      <text style='font-size:26rpx;color:#333;'>助力分享：分享{{appName}}给好友，并且好友打开{{appName}}，即算好友助力成功，每位好友只能助力一次，如有10位好友助力，10位好友上方红包点击领取，拆红包领取随机现金</text>
+    </view>
+  </view>
+  <!-- 好友助力榜 -->
+  <view class='assistance assistance2' wx:if="{{friends.length>0}}">
+    <view class='moneyMore_tit'>
+      <text> 好友助力榜</text>
+    </view>
+    <view wx:for="{{friends}}" wx:key="id" class='friendslist'>
+      <view class='friends_bg'>
+        <text>{{item.top}}</text>
+      </view>
+      <view style='margin:10rpx 20rpx 0;'>
+        <!-- <image src="{{item.headimgurl == '' ? '../../resources/images/user.png':item.headimgurl}}"></image> -->
+        <image src="../../resources/images/user.png"></image>
+      </view>
+      <view style='width:40%;height:60rpx;overflow: hidden;'>
+        <text style='font-size:26rpx;color:#000;'>{{item.topenname == ''? '好友':item.topenname}}</text>
+      </view>
+      <view>
+        <text style='font-size:22rpx;color:#888;'>{{item.addtime}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

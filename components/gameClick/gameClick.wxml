@@ -1,0 +1,34 @@
+<block>
+    <navigator
+        wx:if="{{gameData.g_type == 1&&gameData.details=='hide'}}"
+        target="miniProgram"
+        open-type="navigate"
+        version="release"
+        app-id="{{gameData.appid}}"
+        extra-data="{{gameData.parameter}}"
+        url="{{gameData.g_link}}"
+        path="{{gameData.path}}"
+        bind:tap="onOpenGame"
+    >
+        <slot></slot>
+    </navigator>
+    <navigator
+        wx:if="{{gameData.g_type == 1&&gameData.details=='show'&&isPlay}}"
+        target="miniProgram"
+        open-type="navigate"
+        version="release"
+        app-id="{{gameData.appid}}"
+        extra-data="{{gameData.parameter}}"
+        url="{{gameData.g_link}}"
+        path="{{gameData.path}}"
+        bind:tap="onOpenGame"
+    >
+        <slot></slot>
+    </navigator>
+    <view
+        wx:else
+        bind:tap="onOpenGame"
+    >
+        <slot></slot>
+    </view>
+</block>

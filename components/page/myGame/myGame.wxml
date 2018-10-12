@@ -1,0 +1,23 @@
+<view class='ever_tit' bindtap='everTit' style='top:{{top}}rpx'  wx:if="{{myGamesShow}}">
+    <image src='img/ever.png'></image>
+</view>
+<view class='ever' wx:if="{{ever}}" bind:tap='everClose'>
+    <view class='everCont'>
+        <block wx:for="{{list}}" wx:key="id">
+         <game-click game="{{item}}" subject="mygame">
+            <view class='ever-item'>
+                <view>
+                    <image class='ever-img' src="{{item.icon}}"></image>
+                </view>
+                <view class='name'>{{item.name}}</view>
+            </view>
+        </game-click >
+        </block>
+        <view class='ever-item' bind:tap='jump'>
+            <view class='ever-img '>
+                <text  class='ever-img1'>...</text>
+            </view>
+          
+        </view>
+    </view>
+</view>

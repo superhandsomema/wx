@@ -1,0 +1,38 @@
+<!-- components/tabBar/tabBar.wxml -->
+<view class="tabBar {{isIphoneX ? 'isIphoneX' :'' }}">
+  <view class='tabItems'>
+    <view 
+        wx:for="{{tabBar}}"
+        wx:key="id" 
+        data-index='{{index}}' 
+        class='tabItem' 
+        bind:tap='clickBar'
+    >
+    <view  wx:if="{{item.id !=2}}">
+        <view>
+            <image wx:if="{{item.id != innerIndex}}" src='{{item.iconPath}}'></image>
+            <image wx:else src='{{item.selectedIconPath}}'></image>
+            <view wx:if="{{hdian && item.trueType}}" class='redDian'></view>
+        </view>
+        <view class='textWrap'>
+            <text  class='text'>{{item.text}}</text>
+        </view>
+    </view>
+    <button 
+        wx:else
+        open-type="getUserInfo" 
+        bind:getuserinfo="clickGetUserInfo" 
+        class='auth'> 
+        <image wx:if="{{item.id != innerIndex}}" src='{{item.iconPath}}'></image>
+        <image wx:else src='{{item.selectedIconPath}}'></image>
+        <view wx:if="{{hdian && item.trueType}}" class='redDian'></view>
+    
+        <view class='textWrap'>
+            <text class='text'>{{item.text}}</text>
+        </view>
+    </button>
+     
+ 
+    </view>
+  </view>
+</view>

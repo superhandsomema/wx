@@ -1,0 +1,112 @@
+/* pages/about.wxss */
+page {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  /* padding: 0; */
+}
+.header {
+  width: 100%;
+  height: 344rpx;
+  opacity: 1;
+  background-image: linear-gradient(0, #febc51 0, #fe981d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  position: relative;
+}
+.headerCont {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 35rpx;
+  transform: translateY(-50%);
+}
+.aboutBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 344rpx;
+}
+.userImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #ddd;
+  overflow: hidden;
+  margin-right: 27rpx;
+}
+.moneyCont {
+  width: 690rpx;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 24rpx auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 0 29rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.moneyOpen {
+  width: 110rpx;
+  height: 55rpx;
+  border-radius: 70rpx;
+  position: absolute;
+  right: 29rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24rpx;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ffda44 0%, #ff9600 100%);
+  text-align: center;
+  line-height: 55rpx;
+}
+.shareImg {
+  width: 690rpx;
+  height: 240rpx;
+  position: relative;
+  margin: 0 auto;
+}
+.isIphoneX {
+  margin-bottom: 410rpx;
+}
+.shareImg .shareImgBig {
+  width: 690rpx;
+  height: 240rpx;
+}
+.goShare {
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 60rpx;
+  top: 50%;
+  margin-top: -50rpx;
+  -webkit-animation-name: scaleDraw11; /*关键帧名称*/
+  -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+  -webkit-animation-iteration-count: infinite; /*动画播放的次数*/
+  -webkit-animation-duration: 2s; /*动画所花费的时间*/
+}
+@keyframes scaleDraw11 {
+  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

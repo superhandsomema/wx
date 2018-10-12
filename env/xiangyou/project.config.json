@@ -1,0 +1,86 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "folder",
+				"value": "env"
+			}
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.6",
+	"appid": "wxc69e69dd25e50620",
+	"projectname": "%e4%ba%ab%e6%b8%b8%e5%b0%8f%e5%b1%8b",
+	"isGameTourist": false,
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "about",
+					"pathName": "pages/about/about",
+					"query": "",
+					"scene": "1067"
+				},
+				{
+					"id": 1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "c=test&g=wxef25c25ce42784b9",
+					"scene": "1067"
+				},
+				{
+					"id": 2,
+					"name": "web",
+					"pathName": "pages/wealth/wealth",
+					"query": "",
+					"scene": "1067"
+				},
+				{
+					"id": 3,
+					"name": "ranking",
+					"pathName": "pages/ranking/ranking",
+					"query": "",
+					"scene": "1067"
+				},
+				{
+					"id": -1,
+					"name": "newRank",
+					"pathName": "pages/newRank/newRank",
+					"query": "",
+					"scene": "1067"
+				}
+			]
+		}
+	}
+}

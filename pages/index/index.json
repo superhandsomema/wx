@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "tab-bar": "/components/tabBar/tabBar",
+    "share": "/components/share/share",
+    "my-game": "/components/page/myGame/myGame",
+    "topic": "/components/page/topic/topic",
+    "videoComponent": "/components/page/video/video",
+    "topicHeight": "/components/page/topicHeight/topicHeight",
+    "articles": "/components/page/article/article"
+  },
+  "enablePullDownRefresh": true
+}

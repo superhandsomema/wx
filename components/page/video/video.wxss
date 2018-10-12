@@ -1,0 +1,92 @@
+/* components/page/video.wxss */
+
+.section-title {
+    width:100%;
+    padding: 30rpx 30rpx;
+    box-sizing: border-box;
+}
+.section-title text {
+    font-size: 35rpx;
+    font-weight: bold;
+}
+
+.video {
+    /* width: 100%;   */
+    padding: 0 0 40rpx;
+    margin: 0 30rpx;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #eee;
+}
+
+.uploadWrap{height:586rpx; width:100%; display: flex; display: -webkit-box; flex-direction: column;}
+.upload_Item{ width: 330rpx; height: 586rpx;
+    border-radius: 20rpx;overflow: hidden;
+    flex: 1; margin: 0 10rpx;background: #aaa; position: relative;}
+.upload_ItemBottom {
+    width: 330rpx;
+    height: 100rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(64,64,64, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 0 21rpx;
+    font-size: 22rpx;
+    color: #fff;
+    /* justify-content: space-between; */
+    box-sizing: border-box;
+}
+.upload_ItemBottom image {
+    display: block;
+    width: 64rpx;
+    height: 64rpx;
+    /* border: 1rpx solid #fff; */
+    margin-right: 10rpx;
+    border-radius: 16rpx;
+}
+.upload_ItemBottom .go {
+    width: 60rpx;
+    height: 32rpx;
+    /* border: 1rpx solid #ff9600; */
+    color: #404040;
+    font-size: 18rpx;
+    border-radius: 15rpx;
+    text-align: center;
+    font-weight: bold;
+    background-image:linear-gradient(90deg, #FFDA44 0%, #FF9600 100%);
+    line-height: 34rpx;
+}
+/* .active .upload_ItemBottom .go {
+	color: #ff9600;
+	border: 1rpx solid #ff9600;
+} */
+.upload_Item_img{ width: 330rpx; height: 500rpx;}
+.videoContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videoWZ {
+    position: fixed;
+    width: 500rpx;
+    height: 360rpx;
+    top: 50%;
+    left: 50%;
+    margin: -180rpx 0 0 -250rpx;
+    overflow: hidden;
+}
+
+.videoCont {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 0.5s;
+    overflow: hidden;
+}

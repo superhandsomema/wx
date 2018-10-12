@@ -1,0 +1,19 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 120rpx;
+  box-sizing: border-box;
+}
+
+.inaline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,22 @@
+<view class='section-title'>
+    <text>{{topicData.name}}</text>
+</view>
+<view>
+    <view wx:if="{{topicData.arr.length > 0}}" class="section-topic">
+        <block wx:for="{{topicData.arr}}" wx:key="id" wx:for-item="game">
+            <view class="section-item">
+                <game-click game="{{game}}" subject="{{topicData.type + '_' + topicData.contentid}}">
+                    <view>
+                        <image class="game-image" src="{{game.icon}}"></image>
+                    </view>
+                    <view class='game-name'>
+                        {{game.name}}
+                    </view>
+                    <view class="game-play-num">
+                        {{game.unum}}
+                    </view>
+                </game-click>
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,43 @@
+<view class='section-title'>
+    <text>{{topicHeight.name}}</text>
+</view>
+<view style="width:100%;">
+    <block
+        wx:for="{{topicHeight.arr}}"
+        wx:key="id"
+        wx:for-item="game"
+    >
+        <view class="list_item">
+            <game-click
+                game="{{game}}"
+                subject="{{topicHeight.type + '_' + topicHeight.contentid}}"
+            >
+                <view class="list">
+                    <view style="padding:0 5rpx;">
+                        <image
+                            class="list_img"
+                            src="{{game.icon}}"
+                        ></image>
+                    </view>
+                    <view class='list_txt'>
+                        <view class='list_title'>{{game.name}}</view>
+                        <view class='list_unum'>{{game.unum}}</view>
+                        <view
+                            class='list_desc inaline'
+                        >{{game.descs}}</view>
+                    </view>
+                </view>
+            </game-click>
+            <game-click
+                isPlay="{{true}}"
+                game="{{game}}"
+                subject="{{topicHeight.type + '_' + topicHeight.contentid}}"
+            >
+                <view style="padding-top:50rpx;">
+                    <view class='list_btn2'>PLAY</view>
+                </view>
+            </game-click>
+        </view>
+
+    </block>
+</view>

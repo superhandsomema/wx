@@ -1,0 +1,76 @@
+/* components/page/topicHeight/topicHeight.wxss */
+
+.section-title {
+  width: 100%;
+  padding: 30rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.section-title text {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.list_item {
+  display: flex;
+  padding: 0 30rpx 30rpx;
+  position: relative;
+}
+.list {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list_img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 30rpx;
+}
+
+.list_txt {
+  padding: 0 30rpx 14rpx 20rpx;
+}
+
+.list_title {
+  font-size: 36rpx;
+}
+
+.list_unum {
+  font-size: 24rpx;
+  color: #6e7888;
+  margin: 6rpx 0 4rpx;
+}
+
+.list_desc {
+  max-width: 400rpx;
+  font-size: 24rpx;
+  color: #6e7888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list_btn {
+  padding: 8rpx 30rpx 5rpx 30rpx;
+  background: #ffda44;
+  border-radius: 100px;
+  font-size: 30rpx;
+}
+
+.list_btn2 {
+  width: 110rpx;
+  height: 52rpx;
+  border-radius: 70rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ffda44 0%, #ff9600 100%);
+  text-align: center;
+  line-height: 52rpx;
+  position: absolute;
+  right: 30rpx;
+}
+
+/* button[class="list_btn2"]::after {
+  border: 0;
+}  */
